@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công trình số hóa</title>
+  
+  <style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+    @font-face {
+  font-family: 'UTM HelveIns';
+  src: url('fonts/UTM HelvetIns.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+    body {
+      margin: 0 auto;
+      width: 1200px;
+      font-family: 'UTM HelveIns', Arial, sans-serif;
+    }
+
+    #main {
+      background-image: url("IMG/cube-01.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 1200px;
+      height: 700px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 60px 120px;
+      margin-top: 90px;
+    }
+
+    .button {
+  position: relative;
+  display: inline-block;
+  font-family: 'UTM HelveIns', Arial, sans-serif;
+  padding: 25px 40px;
+  font-size: 18px;
+  color: red;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 3px 5px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  border: none;
+  text-decoration: none; /* tránh gạch chân */
+  text-align: center;
+}
+
+.button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.button span {
+  position: absolute;
+  display: block;
+}
+
+    .button span:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, red);
+      animation: animate1 1s linear infinite;
+    }
+
+    @keyframes animate1 {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
+    }
+
+    .button span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, red);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+
+    @keyframes animate2 {
+      0% { top: -100%; }
+      50%, 100% { top: 100%; }
+    }
+
+    .button span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, red);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes animate3 {
+      0% { right: -100%; }
+      50%, 100% { right: 100%; }
+    }
+
+    .button span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, red);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+
+    @keyframes animate4 {
+      0% { bottom: -100%; }
+      50%, 100% { bottom: 100%; }
+    }
+
+    /* Responsive cho điện thoại */
+/* Responsive cho điện thoại: 1 nút 1 cột */
+@media (max-width: 768px) {
+  body { width: 100%; }
+  #main { 
+    
+    background-image: url("IMG/HOME2.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    width: 100%; height: 700px; }
+
+  .buttons {
+    grid-template-columns: 1fr; /* 1 cột, xếp dọc */
+    grid-gap: 20px; /* khoảng cách giữa các nút */
+    padding: 0 10px;
+  }
+
+  .button {
+    padding: 15px 20px; /* vừa màn hình điện thoại */
+    font-size: 16px;
+  }
+}
+a{
+  text-decoration: none;
+  color: red;
+}
+  </style>
+</head>
+<body>
+  <main>
+    <div id="main">
+      <div class="buttons">
+  <a href="NTD.html" class="button">
+    <span></span><span></span><span></span><span></span>
+    ĐƯỜNG NGUYỄN THỊ ĐỊNH
+  </a>
+  <a href="LVT.html" class="button">
+    <span></span><span></span><span></span><span></span>
+    ĐƯỜNG LÊ VĂN THỊNH
+  </a>
+  <a href="VCC.html" class="button">
+    <span></span><span></span><span></span><span></span>
+    ĐƯỜNG VÕ CHÍ CÔNG
+  </a>
+  <a href="DVC.html" class="button">
+    <span></span><span></span><span></span><span></span>
+    ĐƯỜNG ĐỒNG VĂN CỐNG
+  </a>
+</div>
+
+    </div>
+  </main>
+</body>
+</html>
